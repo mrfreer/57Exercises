@@ -1,0 +1,10 @@
+num1 = int(input("What is the first number?"))
+num2 = int(input("What is the second number?"))
+sum = num1 + num2
+product = num1 * num2
+subtract = num1 - num2
+divide = num1 / num2
+print(format(num1) + " + " + format(num2) + " = " + format(sum))
+print(format(num1) + " - " + format(num2) + " = " + format(subtract))
+print(format(num1) + " * " + format(num2) + " = " + format(product))
+print(format(num1) + " / " + format(num2) + " = " + format(divide))
