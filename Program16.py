@@ -7,7 +7,8 @@ while True:
         continue
     else:
         break
-
+result = 'yes' if age > 15 else 'no'
+print("Can drive? " + result)
 if age < 0:
     print("Incorrect entry.")
 elif age < 16:
