@@ -1,3 +1,4 @@
+import math
 while True:
     try:
         principal = float(input("What is the principal?"))
@@ -11,4 +12,4 @@ while True:
     else:
         break
 amount = principal * pow((1 + rate / numtimes), (numtimes*years))
-print("$" + str(principal) + " invested at " + str(rate* 100) + "% is $" + "{0:.2f}".format(amount))
+print("$" + str(principal) + " invested at " + str(rate* 100) + "% is $" + "{0:.2f}".format(mathamount))
