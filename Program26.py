@@ -11,7 +11,8 @@ while True:
         continue
     else:
         break
+i = i / 100.0
 i = i / 365.0
-print(i)
-n = (-1/30) * ((math.log(1+float(b/p) * (1-math.pow((1+i),30.0))))/math.log(1+i))
-print("It will take you " + str(n) + " to pay off this card.")
+n = (-1/30) * ((math.log(1.0+float(b/p) * (1-math.pow((1+i), 30.0))))/(math.log(1+i)))
+n = math.ceil(n)
+print("It will take you " + str(n) + " months to pay off this card.")
