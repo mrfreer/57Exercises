@@ -1,6 +1,6 @@
 #Password strength indicator
 def checkpassword(pw):
-    #very weak
+    #very weak j
     hasletter = False
     hasnumber = False
     hasspecial = False
