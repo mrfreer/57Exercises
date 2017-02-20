@@ -18,6 +18,19 @@ def displayinfo():
                 curemp = curemp + "\t" + j + "\t"
         print(curemp)
 
+def displayindividual(name):
+    cur.execute("SELECT * FROM employee WHERE first ='" + name + "'")
+    row = cur.fetchall()
+    for i in row:
+        curemp = ""
+        for j in i:
+            if isinstance(j, datetime.date):
+                curemp = curemp + "\t" + datetime.datetime.strftime(j, '%Y-%m-%d')
+            else:
+
+                curemp = curemp + "\t" + j + "\t"
+        print(curemp)
+
 
 def insert():
     first = input("Insert the first name:")
@@ -31,7 +44,7 @@ def insert():
 while True:
     while True:
         try:
-            a = input("Enter 1 to display the data.  Enter 2 to insert the data.")
+            a = input("Enter 1 to display all the data.  Enter 2 to insert the data.  Enter 3 to view individual employees.")
         except ValueError:
             print("Must be a number.")
             continue
@@ -41,6 +54,9 @@ while True:
                 displayinfo()
             elif a == "2":
                 insert()
+            elif a == "3":
+                tocheck = input("Enter a first name to check.")
+                displayindividual(tocheck)
         break
     b = input("Enter quit to stop")
     if b == "quit":
